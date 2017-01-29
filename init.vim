@@ -7,7 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'vim-airline/vim-airline'
 	Plug 'morhetz/gruvbox'
 	Plug 'zeis/vim-kolor'
-	Plug 'jiangmiao/auto-pairs'
+	Plug 'raimondi/delimitmate'
 	Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'sheerun/vim-polyglot'
@@ -15,10 +15,18 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nikvdp/ejs-syntax'
 	Plug 'moll/vim-node'
 	Plug 'scrooloose/syntastic'
+	Plug 'fishbullet/deoplete-ruby'
+	Plug 'vim-ruby/vim-ruby'
+	Plug 'tpope/vim-rails'
+	Plug 'slim-template/vim-slim'
 call plug#end()
 
 set t_Co=256
 syntax enable
+syntax on
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 set background=dark
 color gruvbox
 set cursorline
