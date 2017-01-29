@@ -19,6 +19,9 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'vim-ruby/vim-ruby'
 	Plug 'tpope/vim-rails'
 	Plug 'slim-template/vim-slim'
+	Plug 'benekastah/neomake'
+  Plug 'tomasr/molokai'
+  Plug 'fmoralesc/molokayo'
 call plug#end()
 
 set t_Co=256
@@ -28,7 +31,7 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 set background=dark
-color gruvbox
+color molokayo
 set cursorline
 set linebreak
 set list
@@ -41,10 +44,10 @@ set fileencodings=utf-8,gbk
 set colorcolumn=90
 set number
 set exrc
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
 
 "AutoPairs Config"
 let g:AutoPairsFlyMode = 1
@@ -72,6 +75,24 @@ if !exists('g:deoplete#omni#input_patterns')
   let g:deoplete#omni#input_patterns = {}
 endif
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+let g:deoplete#auto_completion_start_length=2
+
+let g:deoplete#sources={}
+let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
+let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
+let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
+let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
+let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
+
+" Insert <TAB> or select next match
+inoremap <silent> <expr> <Tab> utils#tabComplete()
+
+" Manually trigger tag autocomplete
+inoremap <silent> <expr> <C-]> utils#manualTagComplete()
+
+" <C-h>, <BS>: close popup and delete previous char
+inoremap <expr><C-h> deolete#mappings#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 
 "Vim airline Configuration"
 let g:airline#extensions#tabline#enabled = 1
@@ -83,6 +104,11 @@ let g:kolor_bold=1                      " Enable bold. Default: 1
 let g:kolor_underlined=0                " Enable underline. Default: 0
 let g:kolor_alternative_matchparen=0    " Gray 'MatchParen' color. Default: 0
 filetype plugin indent on
+
+"Emmet Configurations"
+let g:user_emmet_mode='a'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 
 "Ternjs config"
 "let g:tern_request_timeout = 1
@@ -129,3 +155,15 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Run NeoMake on read and write operations
+autocmd! BufReadPost,BufWritePost * Neomake
+
+" Disable inherited syntastic
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": [],
+  \ "passive_filetypes": [] }
+
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
