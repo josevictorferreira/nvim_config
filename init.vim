@@ -26,6 +26,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'airblade/vim-gitgutter'
   Plug 'nlknguyen/papercolor-theme'
   Plug 'slashmili/alchemist.vim'
+  Plug 'chriskempson/base16-vim'
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -36,8 +37,8 @@ syntax on
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-set background=light
-color PaperColor
+set background=dark
+color base16-oceanicnext
 set cursorline
 set linebreak
 set list
@@ -58,6 +59,7 @@ set expandtab
 "AutoPairs Config"
 let g:AutoPairsFlyMode = 1
 let g:AutoPairsShortcutBackInsert = '<M-b>'
+let base16colorspace=256  " Access colors present in 256 colorspace
 
 " omnifuncs
 augroup omnifuncs
