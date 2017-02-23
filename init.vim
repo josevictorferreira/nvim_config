@@ -25,6 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-endwise'
   Plug 'airblade/vim-gitgutter'
   Plug 'nlknguyen/papercolor-theme'
+  Plug 'slashmili/alchemist.vim'
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
