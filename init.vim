@@ -113,7 +113,8 @@ filetype plugin indent on
 "Emmet Configurations"
 let g:user_emmet_mode='a'
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,erb EmmetInstall
+let g:user_emmet_leader_key='<C-Z>'
 
 "Ternjs config"
 "let g:tern_request_timeout = 1
