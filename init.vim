@@ -25,8 +25,11 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tpope/vim-endwise'
   Plug 'airblade/vim-gitgutter'
   Plug 'nlknguyen/papercolor-theme'
-  Plug 'slashmili/alchemist.vim'
   Plug 'chriskempson/base16-vim'
+  Plug 'vimwiki/vimwiki'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'thinca/vim-ref'
+  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -34,11 +37,12 @@ set termguicolors
 set t_Co=256
 syntax enable
 syntax on
+set nocompatible
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 set background=dark
-color base16-oceanicnext
+color base16-eighties
 set cursorline
 set linebreak
 set list
