@@ -29,7 +29,12 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'vimwiki/vimwiki'
   Plug 'elixir-lang/vim-elixir'
   Plug 'thinca/vim-ref'
+  Plug 'davidhalter/jedi-vim'
+  Plug 'zchee/deoplete-jedi'
   Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+  Plug 'KeitaNakamura/highlighter.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'hdima/python-syntax'
+  Plug 'liuchengxu/space-vim-dark'
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -42,7 +47,7 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 set background=dark
-color base16-eighties
+color base16-tomorrow-night
 set cursorline
 set linebreak
 set list
@@ -180,3 +185,5 @@ let g:syntastic_mode_map = {
 
 let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
+
+let python_highlight_all = 1
