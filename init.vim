@@ -35,6 +35,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'KeitaNakamura/highlighter.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'hdima/python-syntax'
   Plug 'liuchengxu/space-vim-dark'
+  Plug 'stanangeloff/php.vim'
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -64,6 +65,8 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+set lazyredraw       " Use for lagged scrolling in large files
 
 "AutoPairs Config"
 let g:AutoPairsFlyMode = 1
