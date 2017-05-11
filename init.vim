@@ -36,6 +36,8 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'hdima/python-syntax'
   Plug 'liuchengxu/space-vim-dark'
   Plug 'stanangeloff/php.vim'
+  Plug 'rking/ag.vim'
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -48,7 +50,7 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 set background=dark
-color base16-tomorrow-night
+color base16-onedark
 set cursorline
 set linebreak
 set list
@@ -65,6 +67,9 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+" Setting fzf path
+set rtp+=~/.fzf
 
 set lazyredraw       " Use for lagged scrolling in large files
 
