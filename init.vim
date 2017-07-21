@@ -1,5 +1,4 @@
 call plug#begin('~/.config/nvim/plugged')
-	Plug 'shougo/deoplete.nvim'
 	Plug 'scrooloose/nerdtree'
 	Plug 'ervandew/supertab'
 	Plug 'pangloss/vim-javascript'
@@ -8,14 +7,12 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'morhetz/gruvbox'
 	Plug 'zeis/vim-kolor'
 	Plug 'raimondi/delimitmate'
-	Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'kien/ctrlp.vim'
 	Plug 'nikvdp/ejs-syntax'
 	Plug 'moll/vim-node'
 	Plug 'scrooloose/syntastic'
-	Plug 'fishbullet/deoplete-ruby'
 	Plug 'vim-ruby/vim-ruby'
 	Plug 'tpope/vim-rails'
 	Plug 'slim-template/vim-slim'
@@ -30,11 +27,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'elixir-lang/vim-elixir'
   Plug 'thinca/vim-ref'
   Plug 'davidhalter/jedi-vim'
-  Plug 'zchee/deoplete-jedi'
   Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
-  Plug 'KeitaNakamura/highlighter.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'hdima/python-syntax'
-  Plug 'liuchengxu/space-vim-dark'
   Plug 'stanangeloff/php.vim'
   Plug 'rking/ag.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -50,8 +43,9 @@ filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 set background=dark
-color base16-onedark
+color base16-tomorrow-night
 set cursorline
+set cursorcolumn
 set linebreak
 set list
 set fileformat=unix
@@ -63,9 +57,9 @@ set fileencodings=utf-8,gbk
 set colorcolumn=90
 set number
 set exrc
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 " Setting fzf path
@@ -94,30 +88,6 @@ if exists('g:plugs["tern_for_vim"]')
   autocmd FileType javascript setlocal omnifunc=tern#Complete
 endif
 
-"Deoplete Configuration"
-let g:deoplete#enable_at_startup = 1
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-let g:deoplete#auto_completion_start_length=2
-
-let g:deoplete#sources={}
-let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
-let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources.css  = ['buffer', 'member', 'file', 'omni', 'ultisnips']
-let g:deoplete#sources.scss = ['buffer', 'member', 'file', 'omni', 'ultisnips']
-
-" Insert <TAB> or select next match
-inoremap <silent> <expr> <Tab> utils#tabComplete()
-
-" Manually trigger tag autocomplete
-inoremap <silent> <expr> <C-]> utils#manualTagComplete()
-
-" <C-h>, <BS>: close popup and delete previous char
-inoremap <expr><C-h> deolete#mappings#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> deoplete#mappings#smart_close_popup()."\<C-h>"
 
 "Vim airline Configuration"
 let g:airline#extensions#tabline#enabled = 1
@@ -194,4 +164,3 @@ let g:syntastic_mode_map = {
 let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
 
-let python_highlight_all = 1
