@@ -17,20 +17,23 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-rails'
 	Plug 'slim-template/vim-slim'
 	Plug 'benekastah/neomake'
-  Plug 'tomasr/molokai'
-  Plug 'fmoralesc/molokayo'
-  Plug 'tpope/vim-endwise'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'nlknguyen/papercolor-theme'
-  Plug 'chriskempson/base16-vim'
-  Plug 'vimwiki/vimwiki'
-  Plug 'elixir-lang/vim-elixir'
-  Plug 'thinca/vim-ref'
-  Plug 'davidhalter/jedi-vim'
-  Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
-  Plug 'stanangeloff/php.vim'
-  Plug 'rking/ag.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'tomasr/molokai'
+    Plug 'fmoralesc/molokayo'
+    Plug 'tpope/vim-endwise'
+    Plug 'airblade/vim-gitgutter'
+    Plug 'nlknguyen/papercolor-theme'
+    Plug 'chriskempson/base16-vim'
+    Plug 'vimwiki/vimwiki'
+    Plug 'elixir-lang/vim-elixir'
+    Plug 'thinca/vim-ref'
+    Plug 'davidhalter/jedi-vim'
+    Plug 'awetzel/elixir.nvim', { 'do': 'yes \| ./install.sh' }
+    Plug 'stanangeloff/php.vim'
+    Plug 'rking/ag.vim'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+    Plug 'vim-scripts/SyntaxRange'
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -47,7 +50,6 @@ color base16-tomorrow-night
 set cursorline
 set cursorcolumn
 set linebreak
-set list
 set fileformat=unix
 set ignorecase
 set smartcase
