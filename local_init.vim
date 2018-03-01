@@ -2,6 +2,7 @@ let mapleader = "\<Space>"
 
 nnoremap <silent> <A-l> :bn<CR>
 nnoremap <silent> <A-h> :bp<CR>
+nnoremap <silent><leader>c :bd<CR>
 nnoremap <silent><leader>; $a;<esc>
 nnoremap <silent><leader>rvi :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>evi :e ~/.config/nvim/init.vim<CR>
