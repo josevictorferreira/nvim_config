@@ -13,3 +13,4 @@ nnoremap <silent><leader>p :Files<CR>
 
 nnoremap <silent><leader>cl iconsole.log()<esc>i
 nnoremap <silent><leader>vd ivar_dump();<esc>hi
+nnoremap <silent><leader>php i<?php  ?><esc>hhi
