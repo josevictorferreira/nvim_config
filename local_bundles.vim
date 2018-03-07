@@ -1,1 +1,1 @@
-Plug 'chriskempson/base16'
+Plug 'chriskempson/base16-vim'
