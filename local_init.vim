@@ -7,6 +7,18 @@ let g:airline_powerline_fonts = 1
 " Setting relative numbers config
 set relativenumber
 
+set cursorcolumn
+set cursorline
+
+if has("termguicolors")
+    set termguicolors
+endif
+
+set background=dark
+
+" Default colorscheme
+colorscheme molokai
+
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <A-l> :bn<CR>
 nnoremap <silent> <A-h> :bp<CR>
