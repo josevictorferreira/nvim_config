@@ -3,21 +3,20 @@ let mapleader = "\<Space>"
 
 " Enable powerline fonts
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'dracula'
 
 " Setting relative numbers config
 set relativenumber
-
+" Setting for cursor orientation
 set cursorcolumn
 set cursorline
 
+" Setting for colorscheme
 if has("termguicolors")
     set termguicolors
 endif
-
 set background=dark
-
-" Default colorscheme
-colorscheme molokai
+colorscheme dracula
 
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <A-l> :bn<CR>
