@@ -11,6 +11,9 @@ set relativenumber
 set cursorcolumn
 set cursorline
 
+" Enable deoplete at startup
+let g:deoplete#enable_at_startup = 1
+
 " Setting for colorscheme
 if has("termguicolors")
     set termguicolors
@@ -25,6 +28,7 @@ nnoremap <silent><leader>c :bd<CR>
 nnoremap <silent><leader>; $a;<esc>
 nnoremap <silent><leader>rvi :source ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>evi :e ~/.config/nvim/init.vim<CR>
+nnoremap <silent><leader>ephp :e ~/.config/nvim/snippets/php.snippet
 nnoremap <silent><leader>lvi :e ~/.config/nvim/local_init.vim<CR>
 nnoremap <silent><leader>llvi :e ~/.config/nvim/local_bundles.vim<CR>
 nnoremap <silent><leader>todo :e ~/Documentos/todo.wiki<CR>
