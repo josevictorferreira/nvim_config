@@ -35,3 +35,15 @@ nnoremap <silent><leader>todo :e ~/Documentos/todo.wiki<CR>
 nnoremap <silent><leader>, :noh<CR>
 nnoremap <silent><leader>p :Files<CR>
 nnoremap <silent><leader>f :Rgrep<CR>
+
+
+" Fix bug between the multiple cursors plugins and deoplete
+function! Multiple_cursors_before()
+    let b:deoplete_disable_auto_complete = 1
+endfunction
+function! Multiple_cursors_after()
+    let b:deoplete_disable_auto_complete = 0
+endfunction
+
+" Fix bug with xml end tag colors
+highlight link xmlEndTag xmlTag
