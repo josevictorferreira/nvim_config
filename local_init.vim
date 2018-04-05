@@ -1,20 +1,20 @@
 " Mapping the leader key
 let mapleader = "\<Space>"
 
-" Enable powerline fonts
+" Vim airline configs
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dracula'
 
-" Setting relative numbers config
+" Relative numbers
 set relativenumber
-" Setting for cursor orientation
+" Cursor orientation settings
 set cursorcolumn
 set cursorline
 
 " Enable deoplete at startup
 let g:deoplete#enable_at_startup = 1
 
-" Setting for colorscheme
+" Theming settings
 if has("termguicolors")
     set termguicolors
 endif
@@ -36,6 +36,7 @@ nnoremap <silent><leader>, :noh<CR>
 nnoremap <silent><leader>p :Files<CR>
 nnoremap <silent><leader>f :Rgrep<CR>
 
+tnoremap <Esc> <C-\><C-n>
 
 " Fix bug between the multiple cursors plugins and deoplete
 function! Multiple_cursors_before()

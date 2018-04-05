@@ -1,3 +1,151 @@
-snippet mcf
+snippet mlog
+	Mage::log(${1}, null, '${2}.log', true);
+snippet mhelper
 	<?php
-	class BIS2BIS
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Helper_Abstract
+	{
+		${0:${VISUAL}}
+	}
+
+snippet mmodel <?php
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Model_Abstract
+	{
+
+		private $db;
+
+		protected function _construct()
+		{
+			$this->db = new Varien_Data_Collection_Db();
+			$this->db->__construct(Mage::getSingleton('core/resource')->getConnection('${2:${VISUAL}}_write'));
+			$this->_init('${3:${VISUAL}}');
+		}
+	}
+
+snippet mresource
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Model_Mysql4_Abstract
+	{
+
+		protected function _construct()
+		{
+			$this->_init('${2:module/entitymodel}', 'id');
+			$this->_isPkAutoIncrement = true;
+		}
+	}
+
+snippet mcoll
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Model_Mysql4_Collection_Abstract
+	{
+
+		protected function _construct()
+		{
+			$this->_init('${2:module/entitymodel}');
+		}
+	}
+
+snippet madmcontrol
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Adminhtml_Controller_Action
+	{
+		${2}
+	}
+
+snippet mblockgridcont
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Adminhtml_Block_Widget_Grid_Container
+	{
+
+		public function __construct()
+		{
+			$this->_blockGroup = '${1}';
+			$this->_controller = 'Adminhtml_${3}_List';
+			$this->_headerText = Mage::helper('${4}')->__('${5}');
+
+			parent::__construct();
+
+			$this->_removeButton('add');
+		}
+	}
+
+snippet mblockgrid
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends Mage_Adminhtml_Block_Widget_Grid
+	{
+
+		public function __construct()
+		{
+			parent::__construct();
+			$this->setId('${2}GridList');
+		}
+
+		protected function _prepareCollection()
+		{
+			$collection = null;
+			$this->setCollection($collection);
+			parent::_prepareCollection();
+			return $this;
+		}
+
+		protected function _prepareColumns()
+		{
+			return parent::_prepareColumns();
+		}
+	}
+
+snippet mblockformcont
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends
+	Mage_Adminhtml_Block_Widget_Form_Container
+	{
+
+		protected function _prepareLayout()
+		{
+			$this->setChild(
+				'form',
+				$this->getLayout()->createBlock('${2}')
+			);
+			return parent::_prepareLayout();
+		}
+
+		public function __construct()
+		{
+			$this->_objectId = 'id';
+			$this->_blockGroup = '${3}';
+			$this->_controller = 'adminhtml_${4}';
+			parent::__construct();
+		}
+	}
+
+snippet mblockform
+	<?php
+
+	class ${1:`vim_snippets#Filename()`} extends
+	Mage_Adminhtml_Block_Widget_Form
+	{
+
+		protected function _prepareForm()
+		{
+			$form = new Varien_Data_Form(array(
+				'id'       => 'edit_form',
+				'action'   => Mage::helper('adminhtml')->getUrl('*/*/save'),
+				'method'   => 'post',
+			));
+
+			$fieldset = $form->addFieldset('base_fieldset', array(
+				'legend'   => Mage::helper('${2}')->__('${3}')
+			));
+
+			$form->setUseContainer(true);
+			$this->setForm($form);
+			return parent::_prepareForm();
+		}
+	}
