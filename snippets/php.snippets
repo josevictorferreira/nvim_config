@@ -3,14 +3,15 @@ snippet mlog
 snippet mhelper
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Helper_Abstract
+	class ${1:`MagentoClassName()`} extends Mage_Core_Helper_Abstract
 	{
 		${0:${VISUAL}}
 	}
 
-snippet mmodel <?php
+snippet mmodel
+	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Model_Abstract
+	class ${1:`MagentoClassName()`} extends Mage_Core_Model_Abstract
 	{
 
 		private $db;
@@ -26,7 +27,7 @@ snippet mmodel <?php
 snippet mresource
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Model_Mysql4_Abstract
+	class ${1:`MagentoClassName()`} extends Mage_Core_Model_Mysql4_Abstract
 	{
 
 		protected function _construct()
@@ -39,7 +40,7 @@ snippet mresource
 snippet mcoll
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Core_Model_Mysql4_Collection_Abstract
+	class ${1:`MagentoClassName()`} extends Mage_Core_Model_Mysql4_Collection_Abstract
 	{
 
 		protected function _construct()
@@ -51,7 +52,7 @@ snippet mcoll
 snippet madmcontrol
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Adminhtml_Controller_Action
+	class ${1:`MagentoClassName()`} extends Mage_Adminhtml_Controller_Action
 	{
 		${2}
 	}
@@ -59,7 +60,7 @@ snippet madmcontrol
 snippet mblockgridcont
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Adminhtml_Block_Widget_Grid_Container
+	class ${1:`MagentoClassName()`} extends Mage_Adminhtml_Block_Widget_Grid_Container
 	{
 
 		public function __construct()
@@ -77,7 +78,7 @@ snippet mblockgridcont
 snippet mblockgrid
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends Mage_Adminhtml_Block_Widget_Grid
+	class ${1:`MagentoClassName()`} extends Mage_Adminhtml_Block_Widget_Grid
 	{
 
 		public function __construct()
@@ -103,7 +104,7 @@ snippet mblockgrid
 snippet mblockformcont
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends
+	class ${1:`MagentoClassName()`} extends
 	Mage_Adminhtml_Block_Widget_Form_Container
 	{
 
@@ -128,7 +129,7 @@ snippet mblockformcont
 snippet mblockform
 	<?php
 
-	class ${1:`vim_snippets#Filename()`} extends
+	class ${1:`MagentoClassName()`} extends
 	Mage_Adminhtml_Block_Widget_Form
 	{
 
@@ -147,5 +148,37 @@ snippet mblockform
 			$form->setUseContainer(true);
 			$this->setForm($form);
 			return parent::_prepareForm();
+		}
+	}
+
+snippet mfrontcont
+	<?php
+
+	class ${1:`MagentoClassName()`} extends Mage_Core_Controller_Front_Action
+	{
+		${2}
+	}
+
+snippet mblocktemp
+	<?php
+
+	class ${1:`MagentoClassName()`} extends Mage_Core_Block_Template
+	{
+		${2}
+	}
+
+snippet customer
+	Mage::getSingleton('customer/session')->getCustomer()${1}
+
+snippet mrenderer
+	<?php
+
+	class ${1:`MagentoClassName()`} extends
+	 Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Abstract
+	{
+
+		public function render(Varien_Object $row)
+		{
+			${2}
 		}
 	}
