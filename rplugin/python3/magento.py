@@ -1,5 +1,4 @@
 import neovim
-import os
 
 @neovim.plugin
 class MagentoPlugin(object):

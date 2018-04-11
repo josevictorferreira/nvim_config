@@ -1,3 +1,5 @@
+*.pyc
 /plugged/*
 /session/*
 .netrwhist
+/rplugin/python3/__pycache__/*
