@@ -11,6 +11,9 @@ set relativenumber
 set cursorcolumn
 set cursorline
 
+set ttyfast
+set lazyredraw
+
 " Enable deoplete at startup
 let g:deoplete#enable_at_startup = 1
 
@@ -35,6 +38,7 @@ nnoremap <silent><leader>todo :e ~/Documentos/todo.wiki<CR>
 nnoremap <silent><leader>, :noh<CR>
 nnoremap <silent><leader>p :Files<CR>
 nnoremap <silent><leader>f :Rgrep<CR>
+nnoremap <silent><leader>/ 0ei//<esc>
 
 tnoremap <Esc> <C-\><C-n>
 
