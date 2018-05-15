@@ -25,3 +25,9 @@ Plug 'prettier/vim-prettier', {
 
 " Plugin for javascript
 Plug 'pangloss/vim-javascript'
+
+Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+
+Plug 'docunext/closetag.vim'
+
+Plug 'valloric/matchtagalways'

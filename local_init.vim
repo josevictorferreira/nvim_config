@@ -3,7 +3,6 @@ let mapleader = "\<Space>"
 
 " Vim airline configs
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dracula'
 
 " Relative numbers
 set relativenumber
@@ -11,6 +10,7 @@ set relativenumber
 set cursorcolumn
 set cursorline
 
+" Fix lagged scrolling
 set ttyfast
 set lazyredraw
 
@@ -22,7 +22,7 @@ if has("termguicolors")
     set termguicolors
 endif
 set background=dark
-colorscheme dracula
+colorscheme base16-gruvbox-dark-soft
 
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <A-l> :bn<CR>
@@ -52,3 +52,5 @@ endfunction
 
 " Fix bug with xml end tag colors
 highlight link xmlEndTag xmlTag
+
+let g:closetag_html_style=1
