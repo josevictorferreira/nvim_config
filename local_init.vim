@@ -3,6 +3,7 @@ let mapleader = "\<Space>"
 
 " Vim airline configs
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16_spacemacs'
 
 " Relative numbers
 set relativenumber
@@ -22,7 +23,7 @@ if has("termguicolors")
     set termguicolors
 endif
 set background=dark
-colorscheme base16-gruvbox-dark-soft
+colorscheme base16-tomorrow-night
 
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <A-l> :bn<CR>
