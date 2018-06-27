@@ -23,7 +23,7 @@ if has("termguicolors")
     set termguicolors
 endif
 set background=dark
-colorscheme base16-tomorrow-night
+colorscheme base16-outrun-dark
 
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <A-l> :bn<CR>
@@ -55,3 +55,7 @@ endfunction
 highlight link xmlEndTag xmlTag
 
 let g:closetag_html_style=1
+
+set linespace=3
+
+let g:syntastic_php_phpcs_args='--standard=~/.composer/vendor/magento-ecg/coding-standard/Ecg'

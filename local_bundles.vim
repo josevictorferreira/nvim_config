@@ -31,3 +31,9 @@ Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 Plug 'docunext/closetag.vim'
 
 Plug 'valloric/matchtagalways'
+
+Plug 'rainglow/vim'
+
+Plug 'dyng/ctrlsf.vim'
+
+Plug 'w0rp/ale'
