@@ -7,7 +7,6 @@ snippet mhelper
 	{
 		${0:${VISUAL}}
 	}
-
 snippet mmodel
 	<?php
 
@@ -23,7 +22,6 @@ snippet mmodel
 			$this->_init('${3:${VISUAL}}');
 		}
 	}
-
 snippet mresource
 	<?php
 
@@ -36,7 +34,6 @@ snippet mresource
 			$this->_isPkAutoIncrement = true;
 		}
 	}
-
 snippet mcoll
 	<?php
 
@@ -48,7 +45,6 @@ snippet mcoll
 			$this->_init('${2:module/entitymodel}');
 		}
 	}
-
 snippet madmcontrol
 	<?php
 
@@ -56,7 +52,6 @@ snippet madmcontrol
 	{
 		${2}
 	}
-
 snippet mblockgridcont
 	<?php
 
@@ -74,7 +69,6 @@ snippet mblockgridcont
 			$this->_removeButton('add');
 		}
 	}
-
 snippet mblockgrid
 	<?php
 
@@ -100,7 +94,6 @@ snippet mblockgrid
 			return parent::_prepareColumns();
 		}
 	}
-
 snippet mblockformcont
 	<?php
 
@@ -125,7 +118,6 @@ snippet mblockformcont
 			parent::__construct();
 		}
 	}
-
 snippet mblockform
 	<?php
 
@@ -150,7 +142,6 @@ snippet mblockform
 			return parent::_prepareForm();
 		}
 	}
-
 snippet mfrontcont
 	<?php
 
@@ -158,7 +149,6 @@ snippet mfrontcont
 	{
 		${2}
 	}
-
 snippet mblocktemp
 	<?php
 
@@ -166,10 +156,8 @@ snippet mblocktemp
 	{
 		${2}
 	}
-
 snippet customer
 	Mage::getSingleton('customer/session')->getCustomer()${1}
-
 snippet mrenderer
 	<?php
 
@@ -182,6 +170,12 @@ snippet mrenderer
 			${2}
 		}
 	}
-
 snippet params
 	$params = $this->getRequest()->getParams();
+snippet mobser
+	<?php
+
+	class ${1:`MagentoClassName()`}
+	{
+		${2}
+	}

@@ -4,12 +4,6 @@ Plug 'vimwiki/vimwiki'
 " Base16 colorschemes
 Plug 'chriskempson/base16-vim'
 
-" Dracula colorscheme
-Plug 'dracula/vim'
-
-" Solarized colorschemes
-Plug 'altercation/vim-colors-solarized'
-
 " Nerd commenter plugin
 Plug 'scrooloose/nerdcommenter'
 
@@ -31,8 +25,6 @@ Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 Plug 'docunext/closetag.vim'
 
 Plug 'valloric/matchtagalways'
-
-Plug 'rainglow/vim'
 
 Plug 'dyng/ctrlsf.vim'
 
