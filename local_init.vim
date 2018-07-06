@@ -23,7 +23,7 @@ if has("termguicolors")
     set termguicolors
 endif
 set background=dark
-colorscheme base16-irblack
+colorscheme base16-outrun-dark
 
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <A-l> :bn<CR>
