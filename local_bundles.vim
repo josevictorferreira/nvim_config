@@ -29,3 +29,11 @@ Plug 'valloric/matchtagalways'
 Plug 'dyng/ctrlsf.vim'
 
 Plug 'w0rp/ale'
+
+Plug 'tpope/vim-endwise'
+
+Plug 'christoomey/vim-tmux-navigator'
+
+Plug 'phanviet/vim-monokai-pro'
+
+Plug 'liuchengxu/vim-which-key'
