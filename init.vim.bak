@@ -1,4 +1,4 @@
-" vim-bootstrap b0a75e4
+" vim-bootstrap b990cad
 
 "*****************************************************************************
 "" Vim-PLug core
@@ -9,7 +9,7 @@ endif
 
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "c,elixir,elm,erlang,go,haskell,html,javascript,lisp,lua,php,python,ruby,rust,scala"
+let g:vim_bootstrap_langs = "c,elixir,elm,erlang,go,haskell,html,javascript,lisp,php,python,ruby,rust,scala"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
@@ -128,12 +128,6 @@ Plug 'jelera/vim-javascript-syntax'
 " lisp
 "" Lisp Bundle
 Plug 'vim-scripts/slimv.vim'
-
-
-" lua
-"" Lua Bundle
-Plug 'xolox/vim-lua-ftplugin'
-Plug 'xolox/vim-lua-inspect'
 
 
 " php
@@ -640,9 +634,6 @@ augroup END
 
 
 " lisp
-
-
-" lua
 
 
 " php

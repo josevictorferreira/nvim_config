@@ -23,7 +23,7 @@ if has("termguicolors")
     set termguicolors
 endif
 set background=dark
-colorscheme monokai_pro
+colorscheme base16-material-darker
 
 " Mapping the buffer move with Alt-h and l
 nnoremap <silent> <S-l> :bn<CR>
@@ -53,6 +53,8 @@ endfunction
 function! Multiple_cursors_after()
     let b:deoplete_disable_auto_complete = 0
 endfunction
+
+let g:syntastic_haml_checkers = ['haml_lint']
 
 " Fix bug with xml end tag colors
 highlight link xmlEndTag xmlTag
