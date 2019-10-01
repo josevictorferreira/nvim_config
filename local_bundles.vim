@@ -42,3 +42,5 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 Plug 'ryanoasis/vim-devicons'
 Plug 'ryanoasis/vim-webdevicons'
+
+Plug 'kevinhui/vim-docker-tools'
