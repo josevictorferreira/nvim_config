@@ -1,6 +1,8 @@
 " Mapping the leader key
 let mapleader = "\<Space>"
 
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+
 " Vim airline configs
 let g:airline_powerline_fonts = 1
 let g:airline_theme='onehalfdark'
@@ -70,6 +72,7 @@ nnoremap <silent><leader>ephp :e ~/.config/nvim/snippets/php.snippet
 nnoremap <silent><leader>lvi :e ~/.config/nvim/local_init.vim<CR>
 nnoremap <silent><leader>llvi :e ~/.config/nvim/local_bundles.vim<CR>
 nnoremap <silent><leader>todo :e ~/Documents/todo.wiki<CR>
+nnoremap <silent><leader>dd :DockerToolsOpen<CR>
 nnoremap <silent><leader>, :noh<CR>
 nnoremap <silent><leader>p :Files<CR>
 nnoremap <silent><leader>f :Rgrep<CR>

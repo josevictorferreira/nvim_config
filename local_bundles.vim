@@ -41,6 +41,13 @@ Plug 'w0rp/ale'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 Plug 'ryanoasis/vim-devicons'
+
 Plug 'ryanoasis/vim-webdevicons'
 
 Plug 'kevinhui/vim-docker-tools'
+
+Plug 'posva/vim-vue'
+
+Plug 'editorconfig/editorconfig-vim'
+
+Plug 'pangloss/vim-javascript'
