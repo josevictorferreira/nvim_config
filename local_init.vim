@@ -1,11 +1,21 @@
 " Mapping the leader key
 let mapleader = "\<Space>"
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $TERM="screen-256color"
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
+
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 
 " Vim airline configs
 let g:airline_powerline_fonts = 1
 let g:airline_theme='onehalfdark'
+
+set diffopt+=vertical
 
 " Relative numbers
 set relativenumber
@@ -71,8 +81,8 @@ nnoremap <silent><leader>evi :e ~/.config/nvim/init.vim<CR>
 nnoremap <silent><leader>ephp :e ~/.config/nvim/snippets/php.snippet
 nnoremap <silent><leader>lvi :e ~/.config/nvim/local_init.vim<CR>
 nnoremap <silent><leader>llvi :e ~/.config/nvim/local_bundles.vim<CR>
-nnoremap <silent><leader>todo :e ~/Documents/todo.wiki<CR>
-nnoremap <silent><leader>dd :DockerToolsOpen<CR>
+nnoremap <silent><leader>todo :e ~/Documentos/todo.wiki<CR>
+nnoremap <silent><leader>dt :DockerToolsOpen<CR>
 nnoremap <silent><leader>, :noh<CR>
 nnoremap <silent><leader>p :Files<CR>
 nnoremap <silent><leader>f :Rgrep<CR>
@@ -82,6 +92,7 @@ nnoremap <silent><leader>rb :! ruby %<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+nnoremap <silent><leader>dos :ed ++ff=dos %<CR>
 
 " Fix bug between the multiple cursors plugins and deoplete
 function! Multiple_cursors_before()

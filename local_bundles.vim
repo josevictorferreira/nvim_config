@@ -51,3 +51,9 @@ Plug 'posva/vim-vue'
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'pangloss/vim-javascript'
+
+Plug 'norcalli/nvim-colorizer.lua'
+
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'tpope/vim-surround'
