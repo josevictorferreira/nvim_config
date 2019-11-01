@@ -19,9 +19,6 @@ set diffopt+=vertical
 
 " Relative numbers
 set relativenumber
-" Cursor orientation settings
-set cursorcolumn
-set cursorline
 
 " Fix lagged scrolling
 set ttyfast
@@ -42,14 +39,8 @@ if exists('+termguicolors')
   set termguicolors
 endif
 set background=light
-colorscheme onehalfdark
+colorscheme base16-tomorrow-night
 
-" Syntastic configs
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\}
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 let g:airline#extensions#ale#enabled = 1

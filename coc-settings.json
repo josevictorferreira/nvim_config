@@ -1,0 +1,5 @@
+{
+  "vetur.format.enable": false,
+  "vetur.format.options.tabSize": 2,
+  "vetur.format.options.useTabs": false
+}
