@@ -1,5 +1,8 @@
 {
   "vetur.format.enable": false,
   "vetur.format.options.tabSize": 2,
-  "vetur.format.options.useTabs": false
+  "vetur.format.options.useTabs": false,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "80"],
+  "coc.preferences.formatOnSaveFiletypes": ["python"]
 }

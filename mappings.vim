@@ -182,7 +182,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " buffer splits
-nmap <leader>s<left>   :leftabove  vnew<CR>
-nmap <leader>s<right>  :rightbelow vnew<CR>
-nmap <leader>s<up>     :leftabove  new<CR>
-nmap <leader>s<down>   :rightbelow new<CR>
+nmap <leader>s<left>   :leftabove  vsplit<CR>
+nmap <leader>s<right>  :rightbelow vsplit<CR>
+nmap <leader>s<up>     :leftabove  split<CR>
+nmap <leader>s<down>   :rightbelow split<CR>
