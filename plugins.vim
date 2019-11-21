@@ -104,3 +104,5 @@ Plug 'derekwyatt/vim-scala'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Ale for auto formatting files
 Plug 'w0rp/ale'
+" Plugin for hex colors
+Plug 'rrethy/vim-hexokinase'

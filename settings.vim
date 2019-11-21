@@ -40,7 +40,7 @@ set smartcase
 set nobackup
 set noswapfile
 set nowritebackup
-set cmdheight=2
+set cmdheight=1
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
@@ -78,7 +78,7 @@ endif
 set gcr=a:blinkon0
 set scrolloff=3
 "" Status bar
-set laststatus=2
+set laststatus=1
 "" Use modeline overrides
 set modeline
 set modelines=10
@@ -220,6 +220,8 @@ augroup vimrc-javascript
   autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
   autocmd FileType vue set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 augroup END
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
+autocmd FileType vue set tabstop=2|set shiftwidth=2|set expandtab softtabstop=2
 
 " python
 " vim-python
@@ -357,4 +359,7 @@ let g:ale_fixers = {'javascript': ['prettier_standard'], 'vue': ['prettier_stand
 let g:ale_linters = {'javascript': ['stylelint'], 'vue': ['stylelint']}
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
-
+let g:colorizer_auto_color = 1
+let g:colorizer_auto_filetype='css,html,vue,scss'
+let g:Hexokinase_highlighters = [ 'virtual' ]
+let g:Hexokinase_ftEnabled = ['css', 'html', 'javascript', 'scss', 'vue']
