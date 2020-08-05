@@ -106,3 +106,5 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
 " Plugin for hex colors
 Plug 'rrethy/vim-hexokinase'
+
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}

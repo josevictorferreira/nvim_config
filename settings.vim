@@ -52,10 +52,10 @@ else
 endif
 syntax on
 set ruler
-set number
+set number relativenumber
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme base16-tomorrow-night
+  colorscheme base16-bright
 endif
 set mousemodel=popup
 set t_Co=256
@@ -120,6 +120,7 @@ endif
 " c
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType md setlocal tabstop=2 shiftwidth=2 expandtab
 " elm
 " elm-vim
 let g:elm_setup_keybindings = 0
