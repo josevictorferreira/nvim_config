@@ -55,7 +55,7 @@ set ruler
 set number relativenumber
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme base16-bright
+  colorscheme base16-material-darker
 endif
 set mousemodel=popup
 set t_Co=256
@@ -125,8 +125,6 @@ autocmd FileType md setlocal tabstop=2 shiftwidth=2 expandtab
 " elm-vim
 let g:elm_setup_keybindings = 0
 let g:elm_format_autosave = 1
-" vim-polyglot
-let g:polyglot_disabled = ['elm']
 " syntastic
 "let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_auto_loc_list = 1
@@ -254,9 +252,6 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 50
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 
